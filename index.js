@@ -1,5 +1,4 @@
 const { config, parse } = require('dotenv')
-const { isString } = require('util')
 
 const defaultOptions = {
     encoding: 'utf8',
