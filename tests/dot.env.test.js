@@ -3,6 +3,8 @@ const env = dot.config({
     examplePath: __dirname,
 });
 
+console.log(env);
+
 test("string env", () => {
     expect(env.TEST_STR).toBe("HELLO WORLD");
 });

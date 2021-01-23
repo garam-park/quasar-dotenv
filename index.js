@@ -24,9 +24,15 @@ module.exports = {
         const baseEnv = parse(baseEnvBuffer)
 
         if(baseEnv){
+            
             quasarEnv = { ...quasarEnv, ...baseEnv }
+
+            for (const [key] of Object.entries(baseEnv)) {
+                const tmp = process.env[key];
+                if(tmp) quasarEnv[key] = tmp;
+            }
+            
         }
-        
         return quasarEnv
     }
 }
